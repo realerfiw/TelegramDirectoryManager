@@ -116,7 +116,7 @@ async def button(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await send_selected_files(context.bot, query.message.chat_id, selected_files[user_id])
             await query.edit_message_text(text="The selected files have been successfully sent!")
         else:
-            keyboard = [[InlineKeyboardButton('🔙 Go Back to Root', callback_data=f"browse:/:0")]]
+            keyboard = [[InlineKeyboardButton('🔙 Go Back to Main Directory', callback_data=f"browse:/:0")]]
             reply_markup = InlineKeyboardMarkup(keyboard)
             await query.edit_message_text(text="No file has been selected!", reply_markup=reply_markup)
 
